@@ -23,8 +23,10 @@ for _ in range(word_length):
     hidden_word += "_"
 print(hidden_word)
 
+#game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
 
+#while loop to go over the check letter untill game over is true
 while game_over == False:
     #ask the user to make a guess
     user_guess = input("Please. Guess a letter: \n")
