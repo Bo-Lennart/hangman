@@ -15,3 +15,9 @@ for _ in range(word_length):
 print(empty_word)
 
 user_guess = input("Please. Guess a letter: \n")
+
+for letter in chosen_word:
+    if letter == user_guess:
+        print("correct guess")
+    else:
+        print("WRONG")
