@@ -29,6 +29,6 @@ user_guess = input("Please. Guess a letter: \n")
 #try a simple for in loop to prin correct/wrong letter for each letter in the words
 for letter in chosen_word:
     if letter == user_guess:
-        print("correct guess")
+        print(empty_word.replace("_", user_guess))
     else:
         print("WRONG")
