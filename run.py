@@ -14,4 +14,4 @@ for _ in range(word_length):
     empty_word += "_"
 print(empty_word)
 
-input("Please. Guess a letter: \n")
+user_guess = input("Please. Guess a letter: \n")
