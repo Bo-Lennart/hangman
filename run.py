@@ -26,7 +26,11 @@ print(empty_word)
 #ask the user to make a guess
 user_guess = input("Please. Guess a letter: \n")
 
-#try a simple for in loop to prin correct/wrong letter for each letter in the words
+# make loop the position of word length
+# make a letter variable to store the chosen_word position (index of that string to check the letter) 
+# and if that letter is the same,
+# as the users guess, run the replacement of that specific positioned string, inside the empty_word string
+# and replace it with the letter
 for position in range(word_length):
     letter = chosen_word[position]
     if letter == user_guess:
