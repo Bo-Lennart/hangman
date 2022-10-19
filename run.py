@@ -26,21 +26,21 @@ print(hidden_word)
 game_over = False
 
 while game_over == False:
-#ask the user to make a guess
-user_guess = input("Please. Guess a letter: \n")
-# make loop the position of word length
-# make a letter variable to store the chosen_word position (index of that string to check the letter) 
-# and if that letter is the same,
-# as the users guess, run the replacement of that specific positioned string, inside the hidden_word string
-# and replace it with the letter
-# and replace it with the letter
-for position in range(word_length):
-    letter = chosen_word[position]
-    if letter == user_guess:
-        hidden_word[position] = letter
+    #ask the user to make a guess
+    user_guess = input("Please. Guess a letter: \n")
+    # make loop the position of word length
+    # make a letter variable to store the chosen_word position (index of that string to check the letter) 
+    # and if that letter is the same,
+    # as the users guess, run the replacement of that specific positioned string, inside the hidden_word string
+    # and replace it with the letter
+    # and replace it with the letter
+    for position in range(word_length):
+        letter = chosen_word[position]
+        if letter == user_guess:
+            hidden_word[position] = letter
 
-print(hidden_word)
+    print(hidden_word)
 
-if "_" not in hidden_word:
-    game_over = True
-    print("Congrats, You Won!!")
+    if "_" not in hidden_word:
+        game_over = True
+        print("Congrats, You Won!!")
