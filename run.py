@@ -57,4 +57,5 @@ while game_over == False:
         print("Congrats, You Won!!")
 
     #Print the hangman and how far the hanging is
+    from ascii_art_game import hangman_stages
     print(hangman_stages[attempts])
