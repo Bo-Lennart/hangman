@@ -2,7 +2,6 @@
 import random
 from ascii_art_game import logo
 print(logo)
-#Possible words for the game that can be chosen randomly by the computer
 from random_words import words_list
 
 #error message function
@@ -35,6 +34,13 @@ print(hidden_word)
 #game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
 
+# function to replace hidden letter with user_guessed letter
+def replace_hidden_letter():
+    for position in range(word_length):
+        letter = chosen_word[position]
+        if letter == user_guess:
+            hidden_word[position] = letter
+
 #while loop to go over the check letter untill game over is true
 while game_over == False:
     #ask the user to make a guess
@@ -43,17 +49,8 @@ while game_over == False:
     #if condition for user_guess length to only use one letter as input
     if len(user_guess) == 1 and user_guess.isalpha():
         print(f'You guessed: {user_guess}')
-
-        # make loop the position of word length
-        # make a letter variable to store the chosen_word position (index of that string to check the letter) 
-        # and if that letter is the same,
-        # as the users guess, run the replacement of that specific positioned string, inside the hidden_word string
-        # and replace it with the letter
-        # and replace it with the letter    
-        for position in range(word_length):
-            letter = chosen_word[position]
-            if letter == user_guess:
-                hidden_word[position] = letter
+ 
+        replace_hidden_letter()
 
         #check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letter:
