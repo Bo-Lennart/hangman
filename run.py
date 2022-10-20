@@ -2,9 +2,12 @@
 import random
 from ascii_art_game import logo
 print(logo)
-
 #Possible words for the game that can be chosen randomly by the computer
 from random_words import words_list
+
+#error message function
+def error_message():
+    print(f'you entered {user_guess}.\nYou can only guess a letter, and only ONE at a time')
 
 #variable to store the random word from the word list in
 chosen_word = random.choice(words_list)
@@ -74,4 +77,4 @@ while game_over == False:
            #error message when same letter has been guessed
             print("You can only guess letter's once and one at a time")
     else:
-        print(f'you entered {user_guess}.\n You can only guess a letter, and only ONE at a time')
+        error_message()
