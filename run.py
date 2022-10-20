@@ -10,6 +10,8 @@ chosen_word = random.choice(words_list)
 #variable to store the length of the chosen word
 word_length = len(chosen_word)
 
+attempts = 6
+
 #Print, check if correct values are loaded to the variables
 print(chosen_word)
 print(word_length)
@@ -40,6 +42,10 @@ while game_over == False:
         letter = chosen_word[position]
         if letter == user_guess:
             hidden_word[position] = letter
+
+    if user_guess not in chosen_word:
+        attempts -= 1
+        print(attempts)
 
     print(hidden_word)
 
