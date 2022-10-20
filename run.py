@@ -54,7 +54,7 @@ while game_over == False:
         print(attempts)
         if attempts == 6:
             game_over = True
-            print("Game Over. You ran out of tries")
+            print("Game Over. You Lost")
 
     print(hidden_word)
 
