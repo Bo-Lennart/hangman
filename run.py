@@ -1,6 +1,58 @@
 #import the random module to generate random choice from word list
 import random
 
+#hanging ascii art (https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
+hangman_stages = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+
 #Possible words for the game that can be chosen randomly by the computer
 words_list = ["hello", "darling", "sciccors", "cloner"]
 
@@ -10,7 +62,7 @@ chosen_word = random.choice(words_list)
 #variable to store the length of the chosen word
 word_length = len(chosen_word)
 
-attempts = 6
+attempts = 0
 
 #Print, check if correct values are loaded to the variables
 print(chosen_word)
@@ -44,9 +96,9 @@ while game_over == False:
             hidden_word[position] = letter
 
     if user_guess not in chosen_word:
-        attempts -= 1
+        attempts += 1
         print(attempts)
-        if attempts == 0:
+        if attempts == 6:
             game_over = True
             print("Game Over. You ran out of tries")
 
@@ -55,3 +107,6 @@ while game_over == False:
     if "_" not in hidden_word:
         game_over = True
         print("Congrats, You Won!!")
+
+    #Print the hangman and how far the hanging is
+    print(hangman_stages[attempts])
