@@ -16,7 +16,6 @@ attempts = 0
 
 #Print, check if correct values are loaded to the variables
 print(chosen_word)
-print(word_length)
 
 #empty list to push "_" into, which will display the word count as hidden letters
 hidden_word = []
@@ -51,7 +50,6 @@ while game_over == False:
     #check if users guess is not in word and if users guessed is not already inside guessed letter
     if user_guess not in chosen_word and user_guess not in guessed_letter:
         attempts += 1
-        print(attempts)
         if attempts == 6:
             game_over = True
             print("Game Over. You Lost")
@@ -68,7 +66,6 @@ while game_over == False:
 
     if user_guess not in guessed_letter:
         guessed_letter.append(user_guess)
-        print(guessed_letter)
     else:
         #error message when same letter has been guessed
         print("You can only guess letter's once and one at a time")
