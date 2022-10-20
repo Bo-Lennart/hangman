@@ -8,6 +8,13 @@ from random_words import words_list
 def error_message():
     print(f'you entered {user_guess}.\nYou can only guess a letter, and only ONE at a time')
 
+# function to replace hidden letter with user_guessed letter
+def replace_hidden_letter():
+    for position in range(word_length):
+        letter = chosen_word[position]
+        if letter == user_guess:
+            hidden_word[position] = letter
+
 #variable to store the random word from the word list in
 chosen_word = random.choice(words_list)
 
@@ -34,12 +41,7 @@ print(hidden_word)
 #game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
 
-# function to replace hidden letter with user_guessed letter
-def replace_hidden_letter():
-    for position in range(word_length):
-        letter = chosen_word[position]
-        if letter == user_guess:
-            hidden_word[position] = letter
+
 
 #while loop to go over the check letter untill game over is true
 while game_over == False:
