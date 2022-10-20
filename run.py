@@ -2,7 +2,7 @@
 import random
 
 #Possible words for the game that can be chosen randomly by the computer
-words_list = ["hello", "darling", "sciccors", "cloner"]
+from random_words import words_list
 
 #variable to store the random word from the word list in
 chosen_word = random.choice(words_list)
