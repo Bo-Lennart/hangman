@@ -37,8 +37,8 @@ while game_over == False:
     #ask the user to make a guess
     user_guess = input("Please. Guess a letter: \n")
 
-    #if condition for user_guess length to only use one input digit
-    if len(user_guess) == 1:
+    #if condition for user_guess length to only use one letter as input
+    if len(user_guess) == 1 and user_guess.isalpha():
         print(user_guess)
 
         # make loop the position of word length
@@ -73,3 +73,5 @@ while game_over == False:
         else:
            #error message when same letter has been guessed
             print("You can only guess letter's once and one at a time")
+    else:
+        print(f'you entered {user_guess}, please use ONE letter to have a valid guess')
