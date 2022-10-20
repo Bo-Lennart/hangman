@@ -10,8 +10,13 @@ class HangmanGame ():
         Initializes the game with a word for the user to guess.
         """
         self.word = word
+def main():
+    word_list = ["kill bill", "armageddon", "bonnie and clyde", 'constantine']
+    hangman = HangmanGame(random.choice(word_list))
+    print(hangman.word)
 
-
+if __name__ == '__main__':
+    main()
 
 
 # #Possible words for the game that can be chosen randomly by the computer
