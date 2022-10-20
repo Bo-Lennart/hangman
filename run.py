@@ -46,6 +46,9 @@ while game_over == False:
     if user_guess not in chosen_word:
         attempts -= 1
         print(attempts)
+        if attempts == 0:
+            game_over = True
+            print("Game Over. You ran out of tries")
 
     print(hidden_word)
 
