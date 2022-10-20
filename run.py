@@ -21,6 +21,8 @@ print(word_length)
 #empty list to push "_" into, which will display the word count as hidden letters
 hidden_word = []
 
+guessed_letter = []
+
 #for in loop that take the length of the word_length variable and
 #pushes the same amount of "_" into it to sbow for the user
 for _ in range(word_length):
