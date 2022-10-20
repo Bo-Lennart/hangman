@@ -48,6 +48,7 @@ while game_over == False:
         if letter == user_guess:
             hidden_word[position] = letter
 
+    #check if users guess is not in word and if users guessed is not already inside guessed letter
     if user_guess not in chosen_word and user_guess not in guessed_letter:
         attempts += 1
         print(attempts)
