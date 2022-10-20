@@ -1,58 +1,6 @@
 #import the random module to generate random choice from word list
 import random
 
-#hanging ascii art (https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
-hangman_stages = ['''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========''']
-
 #Possible words for the game that can be chosen randomly by the computer
 words_list = ["hello", "darling", "sciccors", "cloner"]
 
