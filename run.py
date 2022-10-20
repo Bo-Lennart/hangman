@@ -1,5 +1,7 @@
 #import the random module to generate random choice from word list
 import random
+from ascii_art_game import logo
+print(logo)
 
 #Possible words for the game that can be chosen randomly by the computer
 from random_words import words_list
