@@ -36,36 +36,40 @@ game_over = False
 while game_over == False:
     #ask the user to make a guess
     user_guess = input("Please. Guess a letter: \n")
-    # make loop the position of word length
-    # make a letter variable to store the chosen_word position (index of that string to check the letter) 
-    # and if that letter is the same,
-    # as the users guess, run the replacement of that specific positioned string, inside the hidden_word string
-    # and replace it with the letter
-    # and replace it with the letter
-    for position in range(word_length):
-        letter = chosen_word[position]
-        if letter == user_guess:
-            hidden_word[position] = letter
 
-    #check if users guess is not in word and if users guessed is not already inside guessed letter
-    if user_guess not in chosen_word and user_guess not in guessed_letter:
-        attempts += 1
-        if attempts == 6:
+    #if condition for user_guess length to only use one input digit
+    if len(user_guess) == 1:
+        print(user_guess)
+
+        # make loop the position of word length
+        # make a letter variable to store the chosen_word position (index of that string to check the letter) 
+        # and if that letter is the same,
+        # as the users guess, run the replacement of that specific positioned string, inside the hidden_word string
+        # and replace it with the letter
+        # and replace it with the letter    
+        for position in range(word_length):
+            letter = chosen_word[position]
+            if letter == user_guess:
+                hidden_word[position] = letter
+
+        #check if users guess is not in word and if users guessed is not already inside guessed letter
+        if user_guess not in chosen_word and user_guess not in guessed_letter:
+            attempts += 1
+            if attempts == 6:
+                game_over = True
+                print("Game Over. You Lost")
+            #Print the hangman and how far the hanging is
+            from ascii_art_game import hangman_stages
+            print(hangman_stages[attempts])
+
+        print(hidden_word)
+
+        if "_" not in hidden_word:
             game_over = True
-            print("Game Over. You Lost")
+            print("Congrats, You Won!!")
 
-    print(hidden_word)
-
-    if "_" not in hidden_word:
-        game_over = True
-        print("Congrats, You Won!!")
-
-    #Print the hangman and how far the hanging is
-    from ascii_art_game import hangman_stages
-    print(hangman_stages[attempts])
-
-    if user_guess not in guessed_letter:
-        guessed_letter.append(user_guess)
-    else:
-        #error message when same letter has been guessed
-        print("You can only guess letter's once and one at a time")
+        if user_guess not in guessed_letter:
+            guessed_letter.append(user_guess)
+        else:
+           #error message when same letter has been guessed
+            print("You can only guess letter's once and one at a time")
