@@ -21,6 +21,7 @@ print(word_length)
 #empty list to push "_" into, which will display the word count as hidden letters
 hidden_word = []
 
+#list to push guessed letter into to check if already guessed
 guessed_letter = []
 
 #for in loop that take the length of the word_length variable and
@@ -63,3 +64,7 @@ while game_over == False:
     #Print the hangman and how far the hanging is
     from ascii_art_game import hangman_stages
     print(hangman_stages[attempts])
+
+    if user_guess not in guessed_letter:
+        guessed_letter.append(user_guess)
+        print(guessed_letter)
