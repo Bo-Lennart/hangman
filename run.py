@@ -41,8 +41,6 @@ print(hidden_word)
 #game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
 
-
-
 #while loop to go over the check letter untill game over is true
 while game_over == False:
     #ask the user to make a guess
@@ -53,6 +51,7 @@ while game_over == False:
         print(f'You guessed: {user_guess}')
  
         replace_hidden_letter()
+        print(hidden_word)
 
         #check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letter:
@@ -63,8 +62,6 @@ while game_over == False:
             #Print the hangman and how far the hanging is
             from ascii_art_game import hangman_stages
             print(hangman_stages[attempts])
-
-        print(hidden_word)
 
         if "_" not in hidden_word:
             game_over = True
@@ -77,3 +74,18 @@ while game_over == False:
             print("You can only guess letter's once and one at a time")
     else:
         error_message()
+
+
+
+# class error_codes:
+#     invalid_length = 1
+#     no_letter = 2
+#     no_valid_guess = 3
+#     letter_already_guessed = 4
+
+#     message = {
+#         invalid_length: "Letter can only be 1 character",
+#         no_letter: "The type of your guess is not a letter",
+#         no_valid_guess: "The type of your guess is not valid",
+#         letter_already_guessed: "You have already guess this letter"
+#     }
