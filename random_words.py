@@ -1,4 +1,18 @@
 words_list = ["hello", 
 "darling", 
 "sciccors", 
-"cloner"]
+"cloner",
+"car",
+"blueprint",
+"dragon",
+"corner",
+"scare",
+"london",
+"belgium",
+"airplane",
+"printer",
+"plate",
+"like",
+"true"
+"tell",
+"candle"]
