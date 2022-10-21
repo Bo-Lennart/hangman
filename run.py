@@ -54,8 +54,10 @@ print(hidden_word)
 # game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
 
-# error messages as a class. Ivariables defined in order to pull out message
 class error_codes:
+    '''
+    error messages as a class. Ivariables defined in order to pull out message
+    '''
     invalid_length = 1
     no_letter = 2
     letter_already_guessed = 3
