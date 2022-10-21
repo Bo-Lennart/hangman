@@ -1,4 +1,3 @@
-#import the random module to generate random choice from word list
 import random
 from ascii_art_game import logo
 from ascii_art_game import game_over_ascii
@@ -21,34 +20,38 @@ cprint(' Enjoy!\n', COLORS["GREEN"])
 
 cprint(logo, COLORS["YELLOW"])
 
-# function to replace hidden letter with user_guessed letter
 def replace_hidden_letter():
+    '''
+    Replace hidden letter with user_guessed letter
+    '''
     for position in range(word_length):
         letter = chosen_word[position]
         if letter == user_guess:
             hidden_word[position] = letter
 
-#variable to store the random word from the word list in
+# variable to store the random word from the word list in
 chosen_word = random.choice(words_list)
 
-#variable to store the length of the chosen word
+# variable to store the length of the chosen word
 word_length = len(chosen_word)
 
 attempts = 0
 
-#empty list to push "_" into, which will display the word count as hidden letters
+# empty list to push "_" into, which will display the word count as hidden letters
 hidden_word = []
 
-#list to push guessed letter into to check if already guessed
+# list to push guessed letter into to check if already guessed
 guessed_letters = []
 
-#for in loop that take the length of the word_length variable and
-#pushes the same amount of "_" into it to sbow for the user
 for _ in range(word_length):
+    '''
+    Loop that takes the length of the word_length variable and
+    pushes the same amount of "_" into it to sbow for the user
+    '''
     hidden_word += "_"
 print(hidden_word)
 
-#game over variable to check for in order to trigger game over and stop the while loop
+# game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
 
 # error messages as a class. Ivariables defined in order to pull out message
@@ -63,24 +66,24 @@ class error_codes:
         letter_already_guessed: "ERROR: You have already guess this letter"
     }
 
-#while loop to go over the check letter untill game over is true
+# while loop to go over the check letter untill game over is true
 while game_over == False:
-    #ask the user to make a guess
+    # ask the user to make a guess
     user_guess = input( "Please. Guess a letter: \n").lower()
 
-    #if condition for user_guess length to only use one letter as input
+    # if condition for user_guess length to only use one letter as input
     if len(user_guess) == 1 and user_guess.isalpha():
         replace_hidden_letter()
         print(hidden_word)
 
         print(f'You guessed: {user_guess}')
-        #check if users guess is not in word and if users guessed is not already inside guessed letter
+        # check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letters:
             attempts += 1
             if attempts == 9:
                 game_over = True
                 cprint(game_over_ascii, COLORS["RED"])
-            #Print the hangman and how far the hanging is
+            # Print the hangman and how far the hanging is
             from ascii_art_game import hangman_stages
             cprint(hangman_stages[attempts], COLORS["RED"])
 
@@ -89,7 +92,7 @@ while game_over == False:
             cprint(winner, COLORS["GREEN"])
 
         if user_guess in guessed_letters:
-            #error message when same letter has been guessed
+            # error message when same letter has been guessed
             cprint(error_codes.message[3], COLORS["RED"])
 
         # store guessed letter into the guessed letters list
