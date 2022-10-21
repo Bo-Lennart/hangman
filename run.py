@@ -5,24 +5,24 @@ from ascii_art_game import game_over_ascii
 from ascii_art_game import winner
 from random_words import words_list
 from colorama import init, Fore, Style
-from termcolor import cprint
+from termcolor import print
 
-COLORS = {
-    "RED": "red",
-    "BLUE": "blue",
-    "YELLOW": "yellow",
-    "BLUE_HL": "on_blue",
-    "RED_HL": "on_red",
-    "YELLOW_HL": "on_yellow",
-    "GREEN": "green",
-}
+# COLORS = {
+#     "RED": "red",
+#     "BLUE": "blue",
+#     "YELLOW": "yellow",
+#     "BLUE_HL": "on_blue",
+#     "RED_HL": "on_red",
+#     "YELLOW_HL": "on_yellow",
+#     "GREEN": "green",
+# }
 
-cprint(' Welcome to the Hangman Game!\n \n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!', COLORS["RED"])
-cprint(logo, COLORS["YELLOW"])
+print(' Welcome to the Hangman Game!\n \n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!')
+print(logo)
 
 #error message function
 def error_message():
-    cprint(f'you entered {user_guess}.\nYou can only guess a letter, and only ONE at a time', COLORS["RED"])
+    print(f'you entered {user_guess}.\nYou can only guess a letter, and only ONE at a time')
 
 # function to replace hidden letter with user_guessed letter
 def replace_hidden_letter():
@@ -49,7 +49,7 @@ guessed_letters = []
 #pushes the same amount of "_" into it to sbow for the user
 for _ in range(word_length):
     hidden_word += "_"
-cprint(hidden_word, COLORS["GREEN"])
+print(hidden_word)
 
 #game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
@@ -74,26 +74,26 @@ while game_over == False:
     #if condition for user_guess length to only use one letter as input
     if len(user_guess) == 1 and user_guess.isalpha():
         replace_hidden_letter()
-        cprint(hidden_word, COLORS["GREEN"])
+        print(hidden_word)
 
-        cprint(f'You guessed: {user_guess}', COLORS["BLUE"])
+        print(f'You guessed: {user_guess}')
         #check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letters:
             attempts += 1
             if attempts == 9:
                 game_over = True
-                cprint(game_over_ascii, COLORS["RED"])
+                print(game_over_ascii)
             #Print the hangman and how far the hanging is
             from ascii_art_game import hangman_stages
-            cprint(hangman_stages[attempts], COLORS["RED"])
+            print(hangman_stages[attempts])
 
         if "_" not in hidden_word:
             game_over = True
-            cprint(winner, COLORS["GREEN"])
+            print(winner)
 
         if user_guess in guessed_letters:
             #error message when same letter has been guessed
-            cprint(error_codes.message[3], COLORS["RED"])
+            print(error_codes.message[3])
 
         # store guessed letter into the guessed letters list
         if user_guess not in guessed_letters:
@@ -101,7 +101,7 @@ while game_over == False:
     
     # Error message if the users input is not a letter
     if (user_guess.isalpha()) == False:
-        cprint(error_codes.message[2], COLORS["RED"])
+        print(error_codes.message[2])
     # Error message if the users input length is larger than 1 character
     if len(user_guess) > 1:
-        cprint(error_codes.message[1], COLORS["RED"])
+        print(error_codes.message[1])
