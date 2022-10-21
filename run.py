@@ -17,12 +17,12 @@ COLORS = {
     "WHITE": "white",
 }
 
-print(' Welcome to the Hangman Game!\n \n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!')
-cprint(logo, COLORS["BLUE"])
+cprint(' Welcome to the Hangman Game!\n \n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!', COLORS["RED"])
+cprint(logo, COLORS["YELLOW"])
 
 #error message function
 def error_message():
-    print(f'you entered {user_guess}.\nYou can only guess a letter, and only ONE at a time')
+    cprint(f'you entered {user_guess}.\nYou can only guess a letter, and only ONE at a time', COLORS["RED"])
 
 # function to replace hidden letter with user_guessed letter
 def replace_hidden_letter():
@@ -49,7 +49,7 @@ guessed_letters = []
 #pushes the same amount of "_" into it to sbow for the user
 for _ in range(word_length):
     hidden_word += "_"
-print(hidden_word)
+cprint(hidden_word)
 
 #game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
