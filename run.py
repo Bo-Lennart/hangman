@@ -21,10 +21,6 @@ cprint(' Enjoy!\n', COLORS["GREEN"])
 
 cprint(logo, COLORS["YELLOW"])
 
-#error message function
-def error_message():
-    print(f'you entered {user_guess}.\nYou can only guess a letter, and only ONE at a time')
-
 # function to replace hidden letter with user_guessed letter
 def replace_hidden_letter():
     for position in range(word_length):
