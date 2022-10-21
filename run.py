@@ -3,7 +3,9 @@ import random
 from ascii_art_game import logo
 print(logo)
 from ascii_art_game import game_over_ascii
+from ascii_art_game import winner
 from random_words import words_list
+
 
 #error message function
 def error_message():
@@ -79,7 +81,7 @@ while game_over == False:
 
         if "_" not in hidden_word:
             game_over = True
-            print("Congrats, You Won!!")
+            print(winner)
 
         if user_guess in guessed_letters:
             #error message when same letter has been guessed
@@ -95,6 +97,10 @@ while game_over == False:
     # Error message if the users input length is larger than 1 character
     if len(user_guess) > 1:
         print(error_codes.message[1])
+    
+    if "_" not in hidden_word:
+        break
+
 else:
     print(error_codes.message[3])
 
