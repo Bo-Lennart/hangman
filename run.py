@@ -45,13 +45,11 @@ game_over = False
 class error_codes:
     invalid_length = 1
     no_letter = 2
-    no_valid_guess = 3
-    letter_already_guessed = 4
+    letter_already_guessed = 3
 
     message = {
         invalid_length: "ERROR: Your guess can only be ONE character",
         no_letter: "ERROR: The type of your guess is not a letter",
-        no_valid_guess: "ERROR: The type of your guess is not valid",
         letter_already_guessed: "ERROR: You have already guess this letter"
     }
 
@@ -82,7 +80,7 @@ while game_over == False:
 
         if user_guess in guessed_letters:
             #error message when same letter has been guessed
-            print(error_codes.message[4])
+            print(error_codes.message[3])
 
         # store guessed letter into the guessed letters list
         if user_guess not in guessed_letters:
@@ -94,9 +92,3 @@ while game_over == False:
     # Error message if the users input length is larger than 1 character
     if len(user_guess) > 1:
         print(error_codes.message[1])
-    
-    if "_" not in hidden_word:
-        break
-
-else:
-    print(error_codes.message[3])
