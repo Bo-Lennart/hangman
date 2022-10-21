@@ -26,9 +26,6 @@ word_length = len(chosen_word)
 
 attempts = 0
 
-#Print, check if correct values are loaded to the variables
-print(chosen_word)
-
 #empty list to push "_" into, which will display the word count as hidden letters
 hidden_word = []
 
@@ -72,7 +69,7 @@ while game_over == False:
         #check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letters:
             attempts += 1
-            if attempts == 6:
+            if attempts == 9:
                 game_over = True
                 print(game_over_ascii)
             #Print the hangman and how far the hanging is
@@ -103,5 +100,3 @@ while game_over == False:
 
 else:
     print(error_codes.message[3])
-
-
