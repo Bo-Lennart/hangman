@@ -11,13 +11,14 @@ COLORS = {
     "RED": "red",
     "BLUE": "blue",
     "YELLOW": "yellow",
-    "BLUE_HL": "on_blue",
-    "RED_HL": "on_red",
-    "YELLOW_HL": "on_yellow",
     "GREEN": "green",
 }
 
-cprint(' Welcome to the Hangman Game!\n \n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!', COLORS["RED"])
+cprint(' Welcome to the Hangman Game!\n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!\n', COLORS["YELLOW"])
+cprint(' Rules:\n', COLORS["GREEN"])
+cprint(' * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n Enjoy!\n', COLORS["RED"])
+cprint(' Enjoy!\n', COLORS["GREEN"])
+
 cprint(logo, COLORS["YELLOW"])
 
 #error message function
