@@ -49,7 +49,7 @@ class error_codes:
     letter_already_guessed = 4
 
     message = {
-        invalid_length: "Letter can only be 1 character",
+        invalid_length: "Your guess can only be ONE character",
         no_letter: "The type of your guess is not a letter",
         no_valid_guess: "The type of your guess is not valid",
         letter_already_guessed: "You have already guess this letter"
@@ -88,8 +88,9 @@ while game_over == False:
             guessed_letter.append(user_guess)
     
     if (user_guess.isalpha()) == False:
-            print(error_codes.message[2])
-           
+        print(error_codes.message[2])
+    if len(user_guess) > 1:
+        print(error_codes.message[1])
 
 
 
