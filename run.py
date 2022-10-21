@@ -2,6 +2,7 @@
 import random
 from ascii_art_game import logo
 print(logo)
+from ascii_art_game import game_over_ascii
 from random_words import words_list
 
 #error message function
@@ -71,7 +72,7 @@ while game_over == False:
             attempts += 1
             if attempts == 6:
                 game_over = True
-                print("Game Over. You Lost")
+                print(game_over_ascii)
             #Print the hangman and how far the hanging is
             from ascii_art_game import hangman_stages
             print(hangman_stages[attempts])
