@@ -41,6 +41,19 @@ print(hidden_word)
 #game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
 
+class error_codes:
+    invalid_length = 1
+    no_letter = 2
+    no_valid_guess = 3
+    letter_already_guessed = 4
+
+    message = {
+        invalid_length: "Letter can only be 1 character",
+        no_letter: "The type of your guess is not a letter",
+        no_valid_guess: "The type of your guess is not valid",
+        letter_already_guessed: "You have already guess this letter"
+    }
+
 #while loop to go over the check letter untill game over is true
 while game_over == False:
     #ask the user to make a guess
@@ -71,21 +84,9 @@ while game_over == False:
             guessed_letter.append(user_guess)
         else:
            #error message when same letter has been guessed
-            print("You can only guess letter's once and one at a time")
+            print(error_codes.message[4])
     else:
         error_message()
 
 
 
-# class error_codes:
-#     invalid_length = 1
-#     no_letter = 2
-#     no_valid_guess = 3
-#     letter_already_guessed = 4
-
-#     message = {
-#         invalid_length: "Letter can only be 1 character",
-#         no_letter: "The type of your guess is not a letter",
-#         no_valid_guess: "The type of your guess is not valid",
-#         letter_already_guessed: "You have already guess this letter"
-#     }
