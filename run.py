@@ -30,7 +30,7 @@ print(chosen_word)
 hidden_word = []
 
 #list to push guessed letter into to check if already guessed
-guessed_letter = []
+guessed_letters = []
 
 #for in loop that take the length of the word_length variable and
 #pushes the same amount of "_" into it to sbow for the user
@@ -67,7 +67,7 @@ while game_over == False:
 
         print(f'You guessed: {user_guess}')
         #check if users guess is not in word and if users guessed is not already inside guessed letter
-        if user_guess not in chosen_word and user_guess not in guessed_letter:
+        if user_guess not in chosen_word and user_guess not in guessed_letters:
             attempts += 1
             if attempts == 6:
                 game_over = True
@@ -80,17 +80,21 @@ while game_over == False:
             game_over = True
             print("Congrats, You Won!!")
 
-        if user_guess in guessed_letter:
+        if user_guess in guessed_letters:
             #error message when same letter has been guessed
             print(error_codes.message[4])
 
-        if user_guess not in guessed_letter:
-            guessed_letter.append(user_guess)
+        # store guessed letter into the guessed letters list
+        if user_guess not in guessed_letters:
+            guessed_letters.append(user_guess)
     
+    # Error message if the users input is not a letter
     if (user_guess.isalpha()) == False:
         print(error_codes.message[2])
+    # Error message if the users input length is larger than 1 character
     if len(user_guess) > 1:
         print(error_codes.message[1])
-
+else:
+    print(error_codes.message[3])
 
 
