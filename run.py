@@ -15,6 +15,7 @@ COLORS = {
     "RED_HL": "on_red",
     "YELLOW_HL": "on_yellow",
     "WHITE": "white",
+    "GREEN": "green",
 }
 
 cprint(' Welcome to the Hangman Game!\n \n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!', COLORS["RED"])
@@ -49,7 +50,7 @@ guessed_letters = []
 #pushes the same amount of "_" into it to sbow for the user
 for _ in range(word_length):
     hidden_word += "_"
-cprint(hidden_word)
+cprint(hidden_word, COLORS["GREEN"])
 
 #game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
@@ -69,31 +70,31 @@ class error_codes:
 #while loop to go over the check letter untill game over is true
 while game_over == False:
     #ask the user to make a guess
-    user_guess = input("Please. Guess a letter: \n").lower()
+    user_guess = input(Fore.BLUE + "Please. Guess a letter: \n").lower()
 
     #if condition for user_guess length to only use one letter as input
     if len(user_guess) == 1 and user_guess.isalpha():
         replace_hidden_letter()
-        print(hidden_word)
+        cprint(hidden_word, COLORS["GREEN"])
 
-        print(f'You guessed: {user_guess}')
+        cprint(f'You guessed: {user_guess}', COLORS["BLUE"])
         #check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letters:
             attempts += 1
             if attempts == 9:
                 game_over = True
-                print(game_over_ascii)
+                cprint(game_over_ascii, COLORS["RED"])
             #Print the hangman and how far the hanging is
             from ascii_art_game import hangman_stages
-            print(hangman_stages[attempts])
+            cprint(hangman_stages[attempts], COLORS["RED"])
 
         if "_" not in hidden_word:
             game_over = True
-            print(winner)
+            cprint(winner, COLORS["GREEN"])
 
         if user_guess in guessed_letters:
             #error message when same letter has been guessed
-            print(error_codes.message[3])
+            cprint(error_codes.message[3], COLORS["RED"])
 
         # store guessed letter into the guessed letters list
         if user_guess not in guessed_letters:
@@ -101,7 +102,7 @@ while game_over == False:
     
     # Error message if the users input is not a letter
     if (user_guess.isalpha()) == False:
-        print(error_codes.message[2])
+        cprint(error_codes.message[2], COLORS["RED"])
     # Error message if the users input length is larger than 1 character
     if len(user_guess) > 1:
-        print(error_codes.message[1])
+        cprint(error_codes.message[1], COLORS["RED"])
