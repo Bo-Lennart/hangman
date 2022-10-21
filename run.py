@@ -78,7 +78,7 @@ while game_over == False:
         replace_hidden_letter()
         print(hidden_word)
 
-        print(f'You guessed: {user_guess}')
+        print(f"You guessed: {user_guess}")
         # check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letters:
             attempts += 1
