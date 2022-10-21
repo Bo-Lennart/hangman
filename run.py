@@ -79,18 +79,18 @@ while game_over == False:
             attempts += 1
             if attempts == 9:
                 game_over = True
-                print(game_over_ascii)
+                cprint(game_over_ascii, COLORS["RED"])
             #Print the hangman and how far the hanging is
             from ascii_art_game import hangman_stages
-            print(hangman_stages[attempts])
+            cprint(hangman_stages[attempts], COLORS["RED"])
 
         if "_" not in hidden_word:
             game_over = True
-            print(winner)
+            cprint(winner, COLORS["GREEN"])
 
         if user_guess in guessed_letters:
             #error message when same letter has been guessed
-            print(error_codes.message[3])
+            cprint(error_codes.message[3], COLORS["RED"])
 
         # store guessed letter into the guessed letters list
         if user_guess not in guessed_letters:
@@ -98,7 +98,7 @@ while game_over == False:
     
     # Error message if the users input is not a letter
     if (user_guess.isalpha()) == False:
-        print(error_codes.message[2])
+        cprint(error_codes.message[2], COLORS["RED"])
     # Error message if the users input length is larger than 1 character
     if len(user_guess) > 1:
-        print(error_codes.message[1])
+        cprint(error_codes.message[1], COLORS["RED"])
