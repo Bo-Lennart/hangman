@@ -14,7 +14,6 @@ COLORS = {
     "BLUE_HL": "on_blue",
     "RED_HL": "on_red",
     "YELLOW_HL": "on_yellow",
-    "WHITE": "white",
     "GREEN": "green",
 }
 
