@@ -49,10 +49,10 @@ class error_codes:
     letter_already_guessed = 4
 
     message = {
-        invalid_length: "Your guess can only be ONE character",
-        no_letter: "The type of your guess is not a letter",
-        no_valid_guess: "The type of your guess is not valid",
-        letter_already_guessed: "You have already guess this letter"
+        invalid_length: "ERROR: Your guess can only be ONE character",
+        no_letter: "ERROR: The type of your guess is not a letter",
+        no_valid_guess: "ERROR: The type of your guess is not valid",
+        letter_already_guessed: "ERROR: You have already guess this letter"
     }
 
 #while loop to go over the check letter untill game over is true
