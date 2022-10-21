@@ -58,15 +58,14 @@ class error_codes:
 #while loop to go over the check letter untill game over is true
 while game_over == False:
     #ask the user to make a guess
-    user_guess = input("Please. Guess a letter: \n")
+    user_guess = input("Please. Guess a letter: \n").lower()
 
     #if condition for user_guess length to only use one letter as input
     if len(user_guess) == 1 and user_guess.isalpha():
-        print(f'You guessed: {user_guess}')
- 
         replace_hidden_letter()
         print(hidden_word)
 
+        print(f'You guessed: {user_guess}')
         #check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letter:
             attempts += 1
@@ -81,13 +80,16 @@ while game_over == False:
             game_over = True
             print("Congrats, You Won!!")
 
+        if user_guess in guessed_letter:
+            #error message when same letter has been guessed
+            print(error_codes.message[4])
+
         if user_guess not in guessed_letter:
             guessed_letter.append(user_guess)
-        else:
-           #error message when same letter has been guessed
-            print(error_codes.message[4])
-    else:
-        error_message()
+    
+    if (user_guess.isalpha()) == False:
+            print(error_codes.message[2])
+           
 
 
 
