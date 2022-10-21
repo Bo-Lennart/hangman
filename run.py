@@ -5,7 +5,7 @@ from ascii_art_game import game_over_ascii
 from ascii_art_game import winner
 from random_words import words_list
 
-print(' Welcome to the Hangman Game!\n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!')
+print(' Welcome to the Hangman Game!\n \n Rules:\n * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed tries, otherwise he gets hanged.\n \nEnjoy!')
 print(logo)
 
 #error message function
