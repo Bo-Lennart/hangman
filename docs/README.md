@@ -38,3 +38,5 @@ The user is any person who likes to play guessing games and wants a real challen
 | 5 | User | As a user, I want to have an error that tells me if the input I guess is wrong, already guess or not valid | So I can focus on the game and don't have to worry about unnecessary thinking|
 | 6 | User | As a user, I want to be able to start a new game when the current one ends | So I can try the challenge again|
 | 7 | User | As a user, I want a clear visual response when the game ends, either win or lose | So I clearely understand when the game is over|
+
+## Flowchart
