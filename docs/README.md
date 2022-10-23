@@ -24,3 +24,17 @@ You access the deployed game here: <a href="https://en.wikipedia.org/wiki/Hangma
 * To provide a simple app the allows the user to play the word guessing game Hangman
 * To provide an interactive experience through the game with color and instructions that are easy to understand
 * To provide clear response to the user input
+
+## User Stories
+
+The user is any person who likes to play guessing games and wants a real challenge of the Hangman Game.
+
+|  |  |  |
+|-----------------|:-------------|:---------------:|
+| 1 | User | As a user, I want to be able to play a word guessing game | So I can have some fun|
+| 2 | User | As a user, I want to have a limited amount of attempts| So it's fun yet challenging |
+| 3 | User | As a user, I want to be able to start the game when I am ready | So I can mentally prepare for the challenge |
+| 4 | User | As a user, I want to be able to know how many attempts I have left before the game is lost | So I can plan my steps carefully|
+| 5 | User | As a user, I want to have an error that tells me if the input I guess is wrong, already guess or not valid | So I can focus on the game and don't have to worry about unnecessary thinking|
+| 6 | User | As a user, I want to be able to start a new game when the current one ends | So I can try the challenge again|
+| 7 | User | As a user, I want a clear visual response when the game ends, either win or lose | So I clearely understand when the game is over|
