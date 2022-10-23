@@ -16,3 +16,11 @@ The aim of this project is to deliver a simple  command line application, which 
 The origin of the game is unknown but a variant is mentioned in Alice Gommes' book, released 1894 "Birds, Beasts, and Fishes". This version does not contain the hanged man illustration but presents the score of attempts it took for the player to fill in the blanks.
 
 You access the deployed game here: <a href="https://en.wikipedia.org/wiki/Hangman_(game)" target="_blank">Wikipedia -> Hangman (game)</a>
+
+# User Experience
+
+## Site Aims
+
+* To provide a simple app the allows the user to play the word guessing game Hangman
+* To provide an interactive experience through the game with color and instructions that are easy to understand
+* To provide clear response to the user input
