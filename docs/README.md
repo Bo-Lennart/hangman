@@ -29,8 +29,8 @@ You access the deployed game here: <a href="https://en.wikipedia.org/wiki/Hangma
 
 The user is any person who likes to play guessing games and wants a real challenge of the Hangman Game.
 
-|  |  |  |
-|-----------------|:-------------|:---------------:|
+|  |  |  |   |
+|-----------------|:-------------|:---------------:|:---------------:|
 | 1 | User | As a user, I want to be able to play a word guessing game | So I can have some fun|
 | 2 | User | As a user, I want to have a limited amount of attempts| So it's fun yet challenging |
 | 3 | User | As a user, I want to be able to start the game when I am ready | So I can mentally prepare for the challenge |
