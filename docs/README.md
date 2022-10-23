@@ -40,3 +40,6 @@ The user is any person who likes to play guessing games and wants a real challen
 | 7 | User | As a user, I want a clear visual response when the game ends, either win or lose | So I clearely understand when the game is over|
 
 ## Flowchart
+
+The flowchart is created with the online web page tool <a href="https://miro.com/">'miro'.</a>
+![IMAGE ALT TEXT HERE](../docs/screenshots/flowchart.png)
