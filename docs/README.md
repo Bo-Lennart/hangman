@@ -14,6 +14,7 @@ You access the deployed game here: <a href="https://hangmanpp3.herokuapp.com/" t
 - [Flowchart](#flowchart)
 - [Features](#features)
     - [Welcome Screen](#welcome-screen)
+    - [Error Messages](#error-messages)
 
 # Project Aim
 
@@ -59,3 +60,5 @@ The game starts upon loading and the random word is already generated for the us
 
 <a href="https://miro.com/">'miro'.</a>
 ![IMAGE ALT TEXT HERE](../docs/screenshots/welcome_feature.png)
+
+## Error Messages
