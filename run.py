@@ -1,5 +1,6 @@
 import random
 from ascii_art_game import logo
+from ascii_art_game import welcome_back
 from ascii_art_game import game_over_ascii
 from ascii_art_game import hangman_stages
 from ascii_art_game import winner
@@ -102,6 +103,7 @@ def new_game():
         if len(play_again) > 1:
             if play_again == 'yes':
                 game_over = False
+                cprint(welcome_back, COLORS["GREEN"])
                 cprint(logo, COLORS["YELLOW"])
                 play_hangman()
             else:
