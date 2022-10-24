@@ -12,6 +12,7 @@ You access the deployed game here: <a href="https://hangmanpp3.herokuapp.com/" t
     - [Site Aims](#site-aims)
     - [User Stories](#user-stories)
 - [Flowchart](#flowchart)
+- [Features](#features)
 
 # Project Aim
 
@@ -47,3 +48,5 @@ The user is any person who likes to play guessing games and wants a real challen
 
 The flowchart is created with the online web page tool <a href="https://miro.com/">'miro'.</a>
 ![IMAGE ALT TEXT HERE](../docs/screenshots/flowchart.png)
+
+# Features
