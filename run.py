@@ -64,6 +64,7 @@ while game_over == False:
     if len(user_guess) == 1 and user_guess.isalpha():
         replace_hidden_letter()
         print(hidden_word)
+        cprint(f"Your guesses: {guessed_letters}", COLORS["GREEN"])
         print(f"You guessed: {user_guess}.")
         # check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letters:
