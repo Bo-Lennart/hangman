@@ -26,6 +26,7 @@ word_length = len(chosen_word)
 attempts = 0
 hidden_word = []
 guessed_letters = []
+game_over = False
 
 for _ in range(word_length):
     '''
@@ -34,8 +35,6 @@ for _ in range(word_length):
     '''
     hidden_word += "_"
 print(hidden_word)
-
-game_over = False
 
 class error_codes:
     '''
@@ -128,4 +127,36 @@ while game_over is False:
     
     else:
         display_error()
+
+# while game_over is False:
+#     user_guess = input("Please. Guess a letter: \n").lower()
+
+#     if len(user_guess) == 1 and user_guess.isalpha():
+#         replace_hidden_letter()
+#         print(hidden_word)
+#         cprint(f"Your guesses: {guessed_letters}", COLORS["GREEN"])
+#         print(f"You guessed: {user_guess}.")
+
+#         # check if users guess is not in word and if users guessed is not already inside guessed letter
+#         if user_guess not in chosen_word and user_guess not in guessed_letters:
+#             attempts += 1
+#             display_hangman_stages()
+#             if attempts == 9:
+#                 game_over = True
+#                 game_over_lose()
+#                 new_game()
+
+#         if "_" not in hidden_word:
+#             game_over = True
+#             game_over_win()
+#             new_game()
+        
+#         if user_guess not in guessed_letters:
+#             guessed_letters.append(user_guess)
+
+#         else:
+#             display_error()
+    
+#     else:
+#         display_error()
     
