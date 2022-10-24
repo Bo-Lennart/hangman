@@ -16,5 +16,11 @@ words_list = [
 "like",
 "true",
 "tell",
-"candle"
+"candle",
+"topline",
+"songwriter",
+"dreamer",
+"control",
+"flow",
+"butterfly",
 ]
