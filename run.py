@@ -76,10 +76,6 @@ def display_error():
     # error message when same letter has been guessed
         cprint(error_codes.message[3], COLORS["RED"])
 
-    # store guessed letter into the guessed letters list
-    if user_guess not in guessed_letters:
-        guessed_letters.append(user_guess)
-
     # Error message if the users input is not a letter
     if (user_guess.isalpha()) == False:
         cprint(error_codes.message[2], COLORS["RED"])
@@ -107,6 +103,9 @@ while game_over == False:
         if "_" not in hidden_word:
             game_over = True
             game_over_win()
+        
+        if user_guess not in guessed_letters:
+            guessed_letters.append(user_guess)
 
         else:
             display_error()
