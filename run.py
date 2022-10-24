@@ -29,18 +29,10 @@ def replace_hidden_letter():
         if letter == user_guess:
             hidden_word[position] = letter
 
-# variable to store the random word from the word list in
 chosen_word = random.choice(words_list)
-
-# variable to store the length of the chosen word
 word_length = len(chosen_word)
-
 attempts = 0
-
-# empty list to push "_" into, which will display the word count as hidden letters
 hidden_word = []
-
-# list to push guessed letter into to check if already guessed
 guessed_letters = []
 
 for _ in range(word_length):
@@ -51,9 +43,7 @@ for _ in range(word_length):
     hidden_word += "_"
 print(hidden_word)
 
-# game over variable to check for in order to trigger game over and stop the while loop
 game_over = False
-
 class error_codes:
     '''
     error messages as a class. Ivariables defined in order to pull out message
@@ -68,12 +58,9 @@ class error_codes:
         letter_already_guessed: "ERROR: You have already guess this letter"
     }
 
-# while loop to go over the check letter untill game over is true
 while game_over == False:
-    # ask the user to make a guess
     user_guess = input("Please. Guess a letter: \n").lower()
 
-    # if condition for user_guess length to only use one letter as input
     if len(user_guess) == 1 and user_guess.isalpha():
         replace_hidden_letter()
         print(hidden_word)
