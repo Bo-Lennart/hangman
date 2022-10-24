@@ -18,22 +18,11 @@ cprint(' Welcome to the Hangman Game!\n', COLORS["YELLOW"])
 cprint(' Rules:\n', COLORS["GREEN"])
 cprint(' * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed attempts, otherwise he gets hanged.\n', COLORS["RED"])
 cprint(' Enjoy!\n', COLORS["GREEN"])
-
+hidden_word = []
 cprint(logo, COLORS["YELLOW"])
 chosen_word = random.choice(words_list)
 word_length = len(chosen_word)
-attempts = 0
-hidden_word = []
-guessed_letters = []   
 game_over = False
-
-for _ in range(word_length):
-    '''
-    Loop that takes the length of the word_length variable and
-    pushes the same amount of "_" into it to sbow for the user
-    '''
-    hidden_word += "_"
-print(hidden_word)
 
 class error_codes:
     '''
@@ -85,29 +74,65 @@ def new_game():
     '''
     Function to let the user choose if they want to play again
     '''
-    while game_over is True:
-        play_again = input("Would you like to play again? \nType 'Yes' to play again or 'No' to end \n").lower()
-        if len(play_again) >= 1:
-            if play_again == "yes":
-                break
-            elif play_again == 'no':
-                break
-            else:
-                cprint(f'{play_again} is an invalid input', COLORS["RED"])
+    global game_over
+    global user_guess
+    global attempts
+    global guessed_letters
+    global word_length
+    global hidden_word
+    global chosen_word
+    global play_again
 
-def initiate_game():
-    game_over = False
+    guessed_letters = []
+    user_guess = []
+    play_again = ''
     chosen_word = random.choice(words_list)
     word_length = len(chosen_word)
     attempts = 0
     hidden_word = []
-    guessed_letters = []   
-    play_hangman()
+
+    for _ in range(word_length):
+        '''
+        Loop that takes the length of the word_length variable and
+        pushes the same amount of "_" into it to sbow for the user
+        '''
+        hidden_word += "_"
+
+    while game_over is True:
+        play_again = input("Would you like to play again? \nType 'yes' to play again\n").lower()
+              
+        if len(play_again) > 1:
+            if play_again == 'yes':
+                game_over = False
+                play_hangman()
+            else:
+                cprint(f'{play_again} is an invalid input', COLORS["RED"])
+        else:
+            cprint(f'{play_again} is an invalid input', COLORS["RED"])
 
 def play_hangman():
+    '''
+    The function where the game happens and loops.
+    '''
     global game_over
     global user_guess
     global attempts
+    global guessed_letters
+    global word_length
+    global hidden_word
+    global chosen_word
+
+    hidden_word
+    guessed_letters = []
+    user_guess = []
+    attempts = 0
+
+    for _ in range(word_length):
+        '''
+        Loop that takes the length of the word_length variable and
+        pushes the same amount of "_" into it to sbow for the user
+        '''
+        hidden_word += "_"
 
     while game_over is False:
         user_guess = input("Please. Guess a letter: \n").lower()
@@ -127,10 +152,10 @@ def play_hangman():
                     game_over_lose()
                     new_game()
 
-            if "_" not in hidden_word:
-                game_over = True
-                game_over_win()
-                new_game()
+                if "_" not in hidden_word:
+                    game_over = True
+                    game_over_win()
+                    new_game()
             
             if user_guess not in guessed_letters:
                 guessed_letters.append(user_guess)
@@ -141,7 +166,11 @@ def play_hangman():
         else:
             display_error()
 
+
 play_hangman()
+
+
+
 
 # while game_over is False:
 #     user_guess = input("Please. Guess a letter: \n").lower()

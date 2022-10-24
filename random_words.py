@@ -1,6 +1,6 @@
 words_list = ["hello", 
 "darling", 
-"sciccors", 
+"sciccors",
 "cloner",
 "car",
 "blueprint",
@@ -13,6 +13,6 @@ words_list = ["hello",
 "printer",
 "plate",
 "like",
-"true"
+"true",
 "tell",
 "candle"]
