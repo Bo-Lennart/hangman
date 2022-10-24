@@ -1,6 +1,7 @@
 import random
 from ascii_art_game import logo
 from ascii_art_game import game_over_ascii
+from ascii_art_game import hangman_stages
 from ascii_art_game import winner
 from random_words import words_list
 from colorama import init, Fore, Style
@@ -19,15 +20,6 @@ cprint(' * We generate a random word\n * You guess a letter\n * If the letter is
 cprint(' Enjoy!\n', COLORS["GREEN"])
 
 cprint(logo, COLORS["YELLOW"])
-
-def replace_hidden_letter():
-    '''
-    Replace hidden letter with user_guessed letter
-    '''
-    for position in range(word_length):
-        letter = chosen_word[position]
-        if letter == user_guess:
-            hidden_word[position] = letter
 
 chosen_word = random.choice(words_list)
 word_length = len(chosen_word)
@@ -58,6 +50,15 @@ class error_codes:
         letter_already_guessed: "ERROR: You have already guess this letter"
     }
 
+def replace_hidden_letter():
+    '''
+    Replace hidden letter with user_guessed letter
+    '''
+    for position in range(word_length):
+        letter = chosen_word[position]
+        if letter == user_guess:
+            hidden_word[position] = letter
+
 def game_over_lose():
     cprint(game_over_ascii, COLORS["RED"])
     
@@ -65,7 +66,9 @@ def game_over_win():
     cprint(winner, COLORS["GREEN"])
 
 def display_hangman_stages():
-    from ascii_art_game import hangman_stages
+    '''
+    prints the ascii art stages of the hangman
+    '''
     cprint(hangman_stages[attempts], COLORS["RED"])
 
 while game_over == False:
@@ -103,3 +106,4 @@ while game_over == False:
     # Error message if the users input length is larger than 1 character
     if len(user_guess) > 1:
         cprint(error_codes.message[1], COLORS["RED"])
+
