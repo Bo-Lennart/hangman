@@ -36,6 +36,7 @@ for _ in range(word_length):
 print(hidden_word)
 
 game_over = False
+
 class error_codes:
     '''
     error messages as a class. Ivariables defined in order to pull out message
@@ -88,17 +89,15 @@ def new_game():
     '''
     while game_over is True:
         play_again = input("Would you like to play again? \nType 'Yes' to restart or 'No' to end \n").lower()
-        
         if len(play_again) >= 1:
             if play_again == 'yes':
-                game_over == False
-            elif play_again == 'no':
+                break
+            if play_again == 'no':
                 break
             else:
                 cprint(f'{play_again} is an invalid input', COLORS["RED"])
-                new_game()
 
-while game_over == False:
+while game_over is False:
     user_guess = input("Please. Guess a letter: \n").lower()
 
     if len(user_guess) == 1 and user_guess.isalpha():
@@ -129,5 +128,4 @@ while game_over == False:
     
     else:
         display_error()
-
-
+    
