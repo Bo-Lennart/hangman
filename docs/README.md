@@ -13,6 +13,7 @@ You access the deployed game here: <a href="https://hangmanpp3.herokuapp.com/" t
     - [User Stories](#user-stories)
 - [Flowchart](#flowchart)
 - [Features](#features)
+    - [Welcome Screen](#welcome-screen)
 
 # Project Aim
 
