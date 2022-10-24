@@ -20,12 +20,11 @@ cprint(' * We generate a random word\n * You guess a letter\n * If the letter is
 cprint(' Enjoy!\n', COLORS["GREEN"])
 
 cprint(logo, COLORS["YELLOW"])
-
 chosen_word = random.choice(words_list)
 word_length = len(chosen_word)
 attempts = 0
 hidden_word = []
-guessed_letters = []
+guessed_letters = []   
 game_over = False
 
 for _ in range(word_length):
@@ -87,46 +86,62 @@ def new_game():
     Function to let the user choose if they want to play again
     '''
     while game_over is True:
-        play_again = input("Would you like to play again? \nType 'Yes' to restart or 'No' to end \n").lower()
+        play_again = input("Would you like to play again? \nType 'Yes' to play again or 'No' to end \n").lower()
         if len(play_again) >= 1:
-            if play_again == 'yes':
+            if play_again == "yes":
                 break
-            if play_again == 'no':
+            elif play_again == 'no':
                 break
             else:
                 cprint(f'{play_again} is an invalid input', COLORS["RED"])
 
-while game_over is False:
-    user_guess = input("Please. Guess a letter: \n").lower()
+def initiate_game():
+    game_over = False
+    chosen_word = random.choice(words_list)
+    word_length = len(chosen_word)
+    attempts = 0
+    hidden_word = []
+    guessed_letters = []   
+    play_hangman()
 
-    if len(user_guess) == 1 and user_guess.isalpha():
-        replace_hidden_letter()
-        print(hidden_word)
-        cprint(f"Your guesses: {guessed_letters}", COLORS["GREEN"])
-        print(f"You guessed: {user_guess}.")
+def play_hangman():
+    global game_over
+    global user_guess
+    global attempts
 
-        # check if users guess is not in word and if users guessed is not already inside guessed letter
-        if user_guess not in chosen_word and user_guess not in guessed_letters:
-            attempts += 1
-            display_hangman_stages()
-            if attempts == 9:
+    while game_over is False:
+        user_guess = input("Please. Guess a letter: \n").lower()
+
+        if len(user_guess) == 1 and user_guess.isalpha():
+            replace_hidden_letter()
+            print(hidden_word)
+            cprint(f"Your guesses: {guessed_letters}", COLORS["GREEN"])
+            print(f"You guessed: {user_guess}.")
+
+            # check if users guess is not in word and if users guessed is not already inside guessed letter
+            if user_guess not in chosen_word and user_guess not in guessed_letters:
+                attempts += 1
+                display_hangman_stages()
+                if attempts == 9:
+                    game_over = True
+                    game_over_lose()
+                    new_game()
+
+            if "_" not in hidden_word:
                 game_over = True
-                game_over_lose()
+                game_over_win()
                 new_game()
+            
+            if user_guess not in guessed_letters:
+                guessed_letters.append(user_guess)
 
-        if "_" not in hidden_word:
-            game_over = True
-            game_over_win()
-            new_game()
+            else:
+                display_error()
         
-        if user_guess not in guessed_letters:
-            guessed_letters.append(user_guess)
-
         else:
             display_error()
-    
-    else:
-        display_error()
+
+play_hangman()
 
 # while game_over is False:
 #     user_guess = input("Please. Guess a letter: \n").lower()
