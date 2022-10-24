@@ -165,5 +165,4 @@ def play_hangman():
         else:
             display_error()
 
-
 play_hangman()
