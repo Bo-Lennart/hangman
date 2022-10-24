@@ -72,14 +72,13 @@ def display_hangman_stages():
     cprint(hangman_stages[attempts], COLORS["RED"])
 
 def display_error():
+    '''
+    prints the different error messages according to what the input error was
+    '''
     if user_guess in guessed_letters:
-    # error message when same letter has been guessed
         cprint(error_codes.message[3], COLORS["RED"])
-
-    # Error message if the users input is not a letter
     if (user_guess.isalpha()) == False:
         cprint(error_codes.message[2], COLORS["RED"])
-    # Error message if the users input length is larger than 1 character
     if len(user_guess) > 1:
         cprint(error_codes.message[1], COLORS["RED"])
 
