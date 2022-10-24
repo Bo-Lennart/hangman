@@ -1,4 +1,5 @@
-words_list = ["hello", 
+words_list = [
+"hello",
 "darling", 
 "sciccors",
 "cloner",
@@ -15,4 +16,5 @@ words_list = ["hello",
 "like",
 "true",
 "tell",
-"candle"]
+"candle"
+]
