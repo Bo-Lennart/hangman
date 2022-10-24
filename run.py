@@ -58,6 +58,16 @@ class error_codes:
         letter_already_guessed: "ERROR: You have already guess this letter"
     }
 
+def game_over_lose():
+    cprint(game_over_ascii, COLORS["RED"])
+    
+def game_over_win():
+    cprint(winner, COLORS["GREEN"])
+
+def display_hangman_stages():
+    from ascii_art_game import hangman_stages
+    cprint(hangman_stages[attempts], COLORS["RED"])
+
 while game_over == False:
     user_guess = input("Please. Guess a letter: \n").lower()
 
@@ -66,19 +76,18 @@ while game_over == False:
         print(hidden_word)
         cprint(f"Your guesses: {guessed_letters}", COLORS["GREEN"])
         print(f"You guessed: {user_guess}.")
+
         # check if users guess is not in word and if users guessed is not already inside guessed letter
         if user_guess not in chosen_word and user_guess not in guessed_letters:
             attempts += 1
+            display_hangman_stages()
             if attempts == 9:
                 game_over = True
-                cprint(game_over_ascii, COLORS["RED"])
-            # Print the hangman and how far the hanging is
-            from ascii_art_game import hangman_stages
-            cprint(hangman_stages[attempts], COLORS["RED"])
+                game_over_lose()
 
         if "_" not in hidden_word:
             game_over = True
-            cprint(winner, COLORS["GREEN"])
+            game_over_win()
 
         if user_guess in guessed_letters:
             # error message when same letter has been guessed
