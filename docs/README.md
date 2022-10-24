@@ -50,3 +50,11 @@ The flowchart is created with the online web page tool <a href="https://miro.com
 ![IMAGE ALT TEXT HERE](../docs/screenshots/flowchart.png)
 
 # Features
+
+## Welcome Screen
+The introductory feature contains a welcome message, the game rules and an ascii art hangman logo.
+
+The game starts upon loading and the random word is already generated for the user to guess their first letter when they are ready.
+
+<a href="https://miro.com/">'miro'.</a>
+![IMAGE ALT TEXT HERE](../docs/screenshots/welcome_feature.png)
