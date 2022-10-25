@@ -142,6 +142,10 @@ Read & see more about the testing of the other animations under the [Features](#
 * Select your preferred deplyment type; Automatic Deployment or Manual Deployment
 
 ## Fork Repository to GitHub
+Forking the GitHub account creates a copy of the Repository. Changes can be made on this copy without affecting the original.
+
+1. Log in to GitHub and locate the desired repository
+2. Click the Fork button in the top corner, inline with the repository name.
 
 ## Clone Repository on GitHub
 
