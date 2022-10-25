@@ -118,11 +118,11 @@ Read & see more about the testing of the other animations under the [Features](#
 ## Bug Fixes
 
 ## Terminal Compatibality
-
+This hangman game is to be used and deployed via Heroku, and the terminal template provided by Code Institute.
 ### Heroku Terminal:
-
+![IMAGE ALT TEXT HERE](../docs/screenshots/heroku_terminal.png)
 ### Local Terminal:
-
+![IMAGE ALT TEXT HERE](../docs/screenshots/local_terminal.png)
 # Deployment
 
 ## Deployment to Heroku
