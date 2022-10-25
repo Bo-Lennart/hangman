@@ -35,7 +35,7 @@ class error_codes:
     message = {
         invalid_length: "ERROR: Your guess can only be ONE character",
         no_letter: "ERROR: The type of your guess is not a letter",
-        letter_already_guessed: "ERROR: You have already guess this letter"
+        letter_already_guessed: "ERROR: You have already guessed this letter"
     }
 
 def replace_hidden_letter():
