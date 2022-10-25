@@ -24,7 +24,7 @@ chosen_word = random.choice(words_list)
 word_length = len(chosen_word)
 game_over = False
 
-class error_codes:
+class ErrorCodes:
     '''
     error messages as a class. Ivariables defined in order to pull out message
     '''
@@ -64,11 +64,11 @@ def display_error():
     prints the different error messages according to what the input error was
     '''
     if user_guess in guessed_letters:
-        cprint(error_codes.message[3], COLORS["RED"])
+        cprint(ErrorCodes.message[3], COLORS["RED"])
     if (user_guess.isalpha()) == False:
-        cprint(error_codes.message[2], COLORS["RED"])
+        cprint(ErrorCodes.message[2], COLORS["RED"])
     if len(user_guess) > 1:
-        cprint(error_codes.message[1], COLORS["RED"])
+        cprint(ErrorCodes.message[1], COLORS["RED"])
 
 def new_game():
     '''
