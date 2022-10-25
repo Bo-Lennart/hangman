@@ -58,7 +58,10 @@ The introductory feature contains a welcome message, the game rules and an ascii
 
 The game starts upon loading and the random word is already generated for the user to guess their first letter when they are ready.
 
-<a href="https://miro.com/">'miro'.</a>
 ![IMAGE ALT TEXT HERE](../docs/screenshots/welcome_feature.png)
 
 ## Error Messages
+
+There are three error messages that can display if the users input is not valid. See all three on the screenshot below:
+
+![IMAGE ALT TEXT HERE](../docs/screenshots/error_messages.png)
