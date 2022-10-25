@@ -17,12 +17,19 @@ COLORS = {
 
 cprint(' Welcome to the Hangman Game!\n', COLORS["YELLOW"])
 cprint(' Rules:\n', COLORS["GREEN"])
-cprint(' * We generate a random word\n * You guess a letter\n * If the letter is in the word, the man lives a little longer\n * If the ltter is not in the word he gets closer to be hanged\n * If you find all words, you win and the man gets to live\n * You have 9 failed attempts, otherwise he gets hanged.\n', COLORS["RED"])
+cprint(''' 
+    * We generate a random word\n 
+    * You guess a letter
+    * If the letter is in the word, the man lives a little longer
+    * If the ltter is not in the word he gets closer to be hanged
+    * If you find all words, you win and the man gets to live
+    * You have 9 failed attempts, otherwise he gets hanged.''', COLORS["RED"])
 cprint(' Enjoy!\n', COLORS["GREEN"])
 cprint(logo, COLORS["YELLOW"])
 chosen_word = random.choice(words_list)
 word_length = len(chosen_word)
 game_over = False
+
 
 class ErrorCodes:
     '''
@@ -38,6 +45,7 @@ class ErrorCodes:
         letter_already_guessed: "ERROR: You have already guessed this letter"
     }
 
+
 def replace_hidden_letter():
     '''
     Replace hidden letter with user_guessed letter
@@ -47,11 +55,14 @@ def replace_hidden_letter():
         if letter == user_guess:
             hidden_word[position] = letter
 
+
 def game_over_lose():
     cprint(game_over_ascii, COLORS["RED"])
-    
+
+
 def game_over_win():
     cprint(winner, COLORS["GREEN"])
+
 
 def display_hangman_stages():
     '''
@@ -59,16 +70,18 @@ def display_hangman_stages():
     '''
     cprint(hangman_stages[attempts], COLORS["RED"])
 
+
 def display_error():
     '''
     prints the different error messages according to what the input error was
     '''
-    if user_guess in guessed_letters:
+    if user_guess in guesses:
         cprint(ErrorCodes.message[3], COLORS["RED"])
-    if (user_guess.isalpha()) == False:
+    if (user_guess.isalpha()) is False:
         cprint(ErrorCodes.message[2], COLORS["RED"])
     if len(user_guess) > 1:
         cprint(ErrorCodes.message[1], COLORS["RED"])
+
 
 def new_game():
     '''
@@ -77,13 +90,13 @@ def new_game():
     global game_over
     global user_guess
     global attempts
-    global guessed_letters
+    global guesses
     global word_length
     global hidden_word
     global chosen_word
     global play_again
 
-    guessed_letters = []
+    guesses = []
     user_guess = []
     play_again = ''
     chosen_word = random.choice(words_list)
@@ -99,7 +112,8 @@ def new_game():
         hidden_word += "_"
 
     while game_over is True:
-        play_again = input("Would you like to play again? \nType 'yes' to play again\n").lower()              
+        play_again = input('''Would you like to play again? 
+Type 'yes' to play again\n''').lower()              
         if len(play_again) > 1:
             if play_again == 'yes':
                 game_over = False
@@ -111,6 +125,7 @@ def new_game():
         else:
             cprint(f'{play_again} is an invalid input', COLORS["RED"])
 
+
 def play_hangman():
     '''
     The function where the game happens and loops.
@@ -118,13 +133,13 @@ def play_hangman():
     global game_over
     global user_guess
     global attempts
-    global guessed_letters
+    global guesses
     global word_length
     global hidden_word
     global chosen_word
 
     hidden_word = []
-    guessed_letters = []
+    guesses = []
     user_guess = []
     attempts = 0
 
@@ -141,11 +156,10 @@ def play_hangman():
         if len(user_guess) == 1 and user_guess.isalpha():
             replace_hidden_letter()
             print(hidden_word)
-            cprint(f"Your guesses: {guessed_letters}", COLORS["GREEN"])
+            cprint(f"Your guesses: {guesses}", COLORS["GREEN"])
             print(f"You guessed: {user_guess}.")
 
-            # check if users guess is not in word and if users guessed is not already inside guessed letter
-            if user_guess not in chosen_word and user_guess not in guessed_letters:
+            if user_guess not in chosen_word and user_guess not in guesses:
                 attempts += 1
                 display_hangman_stages()
                 if attempts == 9:
@@ -158,8 +172,8 @@ def play_hangman():
                 game_over_win()
                 new_game()
             
-            if user_guess not in guessed_letters:
-                guessed_letters.append(user_guess)
+            if user_guess not in guesses:
+                guesses.append(user_guess)
 
             else:
                 display_error()
@@ -167,5 +181,6 @@ def play_hangman():
         else:
             display_error()
             print(f"You guessed: {user_guess}.")
+
 
 play_hangman()
