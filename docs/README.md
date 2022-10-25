@@ -65,7 +65,7 @@ The game starts upon loading and the random word is already generated for the us
 
 ## Error Messages
 
-There are three error messages that can display if the users input is not valid. See all three on the screenshot below:
+There are four error messages that can display if the users input is not valid. See all three on the screenshot below:
 
 ![IMAGE ALT TEXT HERE](../docs/screenshots/error_messages.png)
 
