@@ -127,6 +127,20 @@ Read & see more about the testing of the other animations under the [Features](#
 
 ## Deployment to Heroku
 
+* Create a Heroku account and login
+* Click 'New' from the dashboard, underneath the header in the top right corner
+* Click 'Create new app' option
+* Enter your unique application name, select your region and then click 'Create App'
+* Now on the project page, click the 'Settings' tab and scroll down to Config Vars.
+* In the KEY input field, enter 'CREDS' and in the VALUE input field, enter the content of you creds.json file in your repository
+* Click the 'Add' button to the right to add the Convig Vars
+* On the same page scroll down to the buildpacks section and click 'Add Buildpack'
+* Add both the Python and node.js buildpacks, making sure Python is above node.js
+* Go back to the 'Deploy' tab
+* Select Github deployment method
+* Search for your repository and click the 'Connect' to link Heroku to your repository
+* Select your preferred deplyment type; Automatic Deployment or Manual Deployment
+
 ## Fork Repository to GitHub
 
 ## Clone Repository on GitHub
