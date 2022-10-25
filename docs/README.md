@@ -17,6 +17,7 @@ You access the deployed game here: <a href="https://hangmanpp3.herokuapp.com/" t
     - [Error Messages](#error-messages)
     - [Win/Lose, Play again?](#winlose-play-again)
     - [Play again](#play-again)
+- [Technologies Used](#technologies-used)
 
 # Project Aim
 
@@ -79,4 +80,21 @@ When the game comes to an end, depending on if it's a win or a lose. The followi
 If the user choses to type 'yes' and play again, the following screen and ascii art will be displayed. The game starts as soon as the player guesses a new letter.
 
 ![IMAGE ALT TEXT HERE](../docs/screenshots/play_again.png)
+
+# Technologies Used
+* <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> - to provide structure to the program/game
+* <a href="https://en.wikipedia.org/wiki/CSS">CSS3</a> - to add styling to the program/game
+* <a href="https://www.python.org/">Python</a> - to build functionality to the program/game
+* <a href="https://developer.chrome.com/docs/devtools/">Google Chrome DevTools</a> - Debugging
+* <a href="https://miro.com/">Miro</a> - To create a flow chart
+* <a href="https://www.gitpod.io/">Gitpod</a> - Used to create, edit and write the code for the program
+* <a href="https://dashboard.heroku.com/">Heroku</a> - Used to deploy the page
+
+
+
+
+
+
+
+
 
