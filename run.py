@@ -166,5 +166,6 @@ def play_hangman():
         
         else:
             display_error()
+            print(f"You guessed: {user_guess}.")
 
 play_hangman()
