@@ -113,6 +113,8 @@ Manual testing has been carried out for testing that the error messages get trig
 All stages of the hangman work and only get displayed when a guess is a valid guess and has not been already guessed. See the different ascii versions below on the image:
 ![IMAGE ALT TEXT HERE](../docs/screenshots/hangman_stages.png)
 
+Read & see more about the testing of the other animations under the [Features](#features) section.
+
 ## Bug Fixes
 
 ## Terminal Compatibality
