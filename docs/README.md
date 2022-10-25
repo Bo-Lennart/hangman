@@ -65,3 +65,15 @@ The game starts upon loading and the random word is already generated for the us
 There are three error messages that can display if the users input is not valid. See all three on the screenshot below:
 
 ![IMAGE ALT TEXT HERE](../docs/screenshots/error_messages.png)
+
+## Win/Lose, Play again?
+
+When the game comes to an end, depending on if it's a win or a lose. The following ascii arts will be displayed. Below the user can choose to restart the game by typing 'yes'.
+
+![IMAGE ALT TEXT HERE](../docs/screenshots/win_lose.png)
+
+## Play again
+
+If the user choses to typ 'yes' and play again, the following screen and ascii art will be displayed. The game starts as soon as the player guesses a new letter.
+
+![IMAGE ALT TEXT HERE](../docs/screenshots/play_again.png)
