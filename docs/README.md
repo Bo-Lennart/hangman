@@ -76,7 +76,7 @@ When the game comes to an end, depending on if it's a win or a lose. The followi
 
 ## Play again
 
-If the user choses to typ 'yes' and play again, the following screen and ascii art will be displayed. The game starts as soon as the player guesses a new letter.
+If the user choses to type 'yes' and play again, the following screen and ascii art will be displayed. The game starts as soon as the player guesses a new letter.
 
 ![IMAGE ALT TEXT HERE](../docs/screenshots/play_again.png)
 
