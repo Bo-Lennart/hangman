@@ -149,4 +149,11 @@ Forking the GitHub account creates a copy of the Repository. Changes can be made
 
 ## Clone Repository on GitHub
 
+1. Click the code button underneath the main tab
+2. In the 'Clone with HTTPS' section, click the clipboard icon to copy the URL.
+3. Open Git Bash in your IDE of choice.
+4. Change the current working directory to where you want the cloned directory to be made.
+5. Type git clone, and then paste the URL copied from GitHub.
+6. Press enter and the clone of your repository will be created.
+
 # Credits
