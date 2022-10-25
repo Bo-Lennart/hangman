@@ -17,8 +17,8 @@ COLORS = {
 
 cprint(' Welcome to the Hangman Game!\n', COLORS["YELLOW"])
 cprint(' Rules:\n', COLORS["GREEN"])
-cprint(''' 
-    * We generate a random word\n 
+cprint('''
+    * We generate a random word\n
     * You guess a letter
     * If the letter is in the word, the man lives a little longer
     * If the ltter is not in the word he gets closer to be hanged
@@ -112,16 +112,13 @@ def new_game():
         hidden_word += "_"
 
     while game_over is True:
-        play_again = input('''Would you like to play again? 
-Type 'yes' to play again\n''').lower()              
-        if len(play_again) > 1:
-            if play_again == 'yes':
-                game_over = False
-                cprint(welcome_back, COLORS["GREEN"])
-                cprint(logo, COLORS["YELLOW"])
-                play_hangman()
-            else:
-                cprint(f'{play_again} is an invalid input', COLORS["RED"])
+        play_again = input('''Would you like to play again?
+Type 'yes' to play again\n''').lower()
+        if len(play_again) > 1 and play_again == 'yes':
+            game_over = False
+            cprint(welcome_back, COLORS["GREEN"])
+            cprint(logo, COLORS["YELLOW"])
+            play_hangman()
         else:
             cprint(f'{play_again} is an invalid input', COLORS["RED"])
 
@@ -171,13 +168,13 @@ def play_hangman():
                 game_over = True
                 game_over_win()
                 new_game()
-            
+
             if user_guess not in guesses:
                 guesses.append(user_guess)
 
             else:
                 display_error()
-        
+
         else:
             display_error()
             print(f"You guessed: {user_guess}.")
