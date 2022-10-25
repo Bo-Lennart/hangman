@@ -18,6 +18,18 @@ You access the deployed game here: <a href="https://hangmanpp3.herokuapp.com/" t
     - [Win/Lose, Play again?](#winlose-play-again)
     - [Play again](#play-again)
 - [Technologies Used](#technologies-used)
+- [Testing](#testing)
+    - [PEP8 Validator Extensions](#pep8-validator-extension)
+    - [Manual Testing](#manual-testing)
+    - [Bug Fixes](#bug-fixes)
+- [Terminal Compitability](#terminal-compatibality)
+    - [Heroku Terminal](#heroku-terminal)
+    - [Local Terminal](#local-terminal)
+- [Deployment](#deployment)
+    - [Deployment to Heroku](#deployment-to-heroku)
+    - [Fork Repository to GitHub](#fork-repository-to-github)
+    - [Clone Repository on GitHub](#clone-repository-on-github)
+- [Credits](#credits)
 
 # Project Aim
 
@@ -90,11 +102,27 @@ If the user choses to type 'yes' and play again, the following screen and ascii 
 * <a href="https://www.gitpod.io/">Gitpod</a> - Used to create, edit and write the code for the program
 * <a href="https://dashboard.heroku.com/">Heroku</a> - Used to deploy the page
 
+# Testing
+## PEP8 Validator Extension
+Running the pep8 validator extension within gitpod showed a number of errors and warnings. Among these where syntax errors such as 2 blank lines after classes, function etc. Furthermore to long lines have been shortened and class names have been changed to camelcased, starting with a capital letter. 
+![IMAGE ALT TEXT HERE](../docs/screenshots/pep8_validator.png)
 
+## Manual Testing
 
+## Bug Fixes
 
+## Terminal Compatibality
 
+### Heroku Terminal:
 
+### Local Terminal:
 
+# Deployment
 
+## Deployment to Heroku
 
+## Fork Repository to GitHub
+
+## Clone Repository on GitHub
+
+# Credits
