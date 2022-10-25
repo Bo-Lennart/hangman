@@ -108,6 +108,10 @@ Running the pep8 validator extension within gitpod showed a number of errors and
 ![IMAGE ALT TEXT HERE](../docs/screenshots/pep8_validator.png)
 
 ## Manual Testing
+Manual testing has been carried out for testing that the error messages get triggered when they are supposed to, that functions work as intended and that the different ascii art screens display accordingly. 
+
+All stages of the hangman work and only get displayed when a guess is a valid guess and has not been already guessed. See the different ascii versions below on the image:
+![IMAGE ALT TEXT HERE](../docs/screenshots/hangman_stages.png)
 
 ## Bug Fixes
 
