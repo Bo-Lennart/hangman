@@ -15,6 +15,8 @@ You access the deployed game here: <a href="https://hangmanpp3.herokuapp.com/" t
 - [Features](#features)
     - [Welcome Screen](#welcome-screen)
     - [Error Messages](#error-messages)
+    - [Win/Lose, Play again?](#winlose-play-again)
+    - [Play again](#play-again)
 
 # Project Aim
 
@@ -77,3 +79,4 @@ When the game comes to an end, depending on if it's a win or a lose. The followi
 If the user choses to typ 'yes' and play again, the following screen and ascii art will be displayed. The game starts as soon as the player guesses a new letter.
 
 ![IMAGE ALT TEXT HERE](../docs/screenshots/play_again.png)
+
