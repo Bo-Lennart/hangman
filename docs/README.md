@@ -22,6 +22,7 @@ You access the deployed game here: <a href="https://hangmanpp3.herokuapp.com/" t
     - [PEP8 Validator Extensions](#pep8-validator-extension)
     - [Manual Testing](#manual-testing)
     - [Bug Fixes](#bug-fixes)
+        -[Mentor Feedback](#mentor-feedback)
 - [Terminal Compitability](#terminal-compatibality)
     - [Heroku Terminal](#heroku-terminal)
     - [Local Terminal](#local-terminal)
@@ -124,7 +125,7 @@ Errors that occured but are fixed now were:
 * Other errors that occured where syntax errors. I took a while for my eyes to get used to how the text was supposed to be aligned in the document for python to read it properly.
 * Another but that occured was that when the input was an uper cased letter and then a lower case, the user was able to guess the same letter and the hang man got hanged. So by incerting the function of lower(), on the input for the user this issue was resolved.
 
-### Mentor Session
+### Mentor Feedback
 
 My mentor pointed out improvements throughout our session and advices me to build more functions instead of running the whole command line app as one whole while loop on a global level. 
 
