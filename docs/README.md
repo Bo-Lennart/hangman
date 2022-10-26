@@ -109,7 +109,7 @@ If the user chooses to type 'yes' and play again, the following screen and ascii
 * <a href="https://pypi.org/project/colorama/">Colorama</a> - Allows terminal text to be printed in different colors.
 * <a href="https://pypi.org/project/termcolor2/">Termcolor</a> - To use the 'cprint' to color text in terminal.
 * <a href="https://pypi.org/project/random2/">Random</a> - To use 'random.choice' when importing random word from the words list
-* Further more I have created my own words list and ascii art .py file and imported these to the program.
+* Furthermore I have created my own words list and ascii art .py file and imported these to the program.
 
 
 
