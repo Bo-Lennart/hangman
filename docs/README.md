@@ -192,6 +192,6 @@ Forking the GitHub account creates a copy of the Repository. Changes can be made
 * <a href="https://fsymbols.com/generators/carty/">Ascii Art Generator for custom text</a> 
 * <a href="https://github.com/TashaTJ/pp3-practice/blob/main/
 run.py">Color project Inpso</a> 
-* <a href="https://www.python.org/">Python</a> 
-* <a href="https://www.python.org/">Python</a> 
-* <a href="https://www.python.org/">Python</a> 
+* <a href="https://codereview.stackexchange.com/questions/174419/hangman-game-class-in-python">Game Structure inspiration</a> 
+
+
