@@ -22,7 +22,7 @@ You access the deployed game here: <a href="https://hangmanpp3.herokuapp.com/" t
     - [PEP8 Validator Extensions](#pep8-validator-extension)
     - [Manual Testing](#manual-testing)
     - [Bug Fixes](#bug-fixes)
-        -[Mentor Feedback](#mentor-feedback)
+        - [Mentor Feedback](#mentor-feedback)
 - [Terminal Compitability](#terminal-compatibality)
     - [Heroku Terminal](#heroku-terminal)
     - [Local Terminal](#local-terminal)
@@ -124,6 +124,7 @@ Errors that occured but are fixed now were:
 * Error messages displayed after the game was finished. When I tested wrong input when asking user to play again, other error messages such as "Already guessed" triggered. The only message I wanted to display here was "Invalid input" - Resolved.
 * Other errors that occured where syntax errors. I took a while for my eyes to get used to how the text was supposed to be aligned in the document for python to read it properly.
 * Another but that occured was that when the input was an uper cased letter and then a lower case, the user was able to guess the same letter and the hang man got hanged. So by incerting the function of lower(), on the input for the user this issue was resolved.
+* I also had to use the Global keyword inside the different functions that affect the reset of the game values, such as the guessed letter list, attempts and other values that get set when the program starts running.
 
 ### Mentor Feedback
 
@@ -173,3 +174,4 @@ Forking the GitHub account creates a copy of the Repository. Changes can be made
 6. Press enter and the clone of your repository will be created.
 
 # Credits
+
