@@ -103,6 +103,10 @@ If the user choses to type 'yes' and play again, the following screen and ascii 
 * <a href="https://www.gitpod.io/">Gitpod</a> - Used to create, edit and write the code for the program
 * <a href="https://dashboard.heroku.com/">Heroku</a> - Used to deploy the page
 
+## Python Libraries
+* <a href="https://pypi.org/project/colorama/">Colorama</a> - Allows terminal text to be printed in different colors.
+* <a href="https://pypi.org/project/termcolor2/">Termcolor</a> - To use the 'cprint' to color text in terminal.
+
 # Testing
 ## PEP8 Validator Extension
 Running the pep8 validator extension within gitpod showed a number of errors and warnings. Among these where syntax errors such as 2 blank lines after classes, function etc. Furthermore to long lines have been shortened and class names have been changed to camelcased, starting with a capital letter. 
@@ -175,3 +179,14 @@ Forking the GitHub account creates a copy of the Repository. Changes can be made
 
 # Credits
 
+* <a href="https://bobbyhadz.com/blog/python-input-only-accept-one-character">Single character input inspiration</a> 
+* <a href="https://www.geeksforgeeks.org/python-string-isalpha-method/">How to check if input is string</a> 
+* <a href="https://textart4u.blogspot.com/2013/05/game-over-text-art.html">Game Over Ascii Art</a> 
+* <a href="https://bobbyhadz.com/blog/python-no-module-named-colorama
+">Colorama import</a> 
+* <a href="https://fsymbols.com/generators/carty/">Ascii Art Generator for custom text</a> 
+* <a href="https://github.com/TashaTJ/pp3-practice/blob/main/
+run.py">Color project Inpso</a> 
+* <a href="https://www.python.org/">Python</a> 
+* <a href="https://www.python.org/">Python</a> 
+* <a href="https://www.python.org/">Python</a> 
