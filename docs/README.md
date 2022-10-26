@@ -117,6 +117,21 @@ Read & see more about the testing of the other animations under the [Features](#
 
 ## Bug Fixes
 
+Bugs encountering through the building were discovered by testing different functionalities.
+Errors that occured but are fixed now were:
+* When the user guessed wrong input, this would be stored inside the guesses - Resolved.
+* Error messages displayed after the game was finished. When I tested wrong input when asking user to play again, other error messages such as "Already guessed" triggered. The only message I wanted to display here was "Invalid input" - Resolved.
+* Other errors that occured where syntax errors. I took a while for my eyes to get used to how the text was supposed to be aligned in the document for python to read it properly.
+* Another but that occured was that when the input was an uper cased letter and then a lower case, the user was able to guess the same letter and the hang man got hanged. So by incerting the function of lower(), on the input for the user this issue was resolved.
+
+### Mentor Session
+
+My mentor pointed out improvements throughout our session and advices me to build more functions instead of running the whole command line app as one whole while loop on a global level. 
+
+When starting the refactor the whole game broke but eventually I could break out code snippets into functions and then find my way out.
+
+This essentually gave me the possibility to add the feature of asking the player if they want to play again and so be able to run a new game without reloading the page.
+
 ## Terminal Compatibality
 This hangman game is to be used and deployed via Heroku, and the terminal template provided by Code Institute.
 ### Heroku Terminal:
