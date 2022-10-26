@@ -62,6 +62,7 @@ The user is any person who likes to play guessing games and wants a real challen
 | 5 | User | As a user, I want to have an error that tells me if the input I guess is wrong, already guess or not valid | So I can focus on the game and don't have to worry about unnecessary thinking|
 | 6 | User | As a user, I want to be able to start a new game when the current one ends | So I can try the challenge again|
 | 7 | User | As a user, I want a clear visual response when the game ends, either win or lose | So I clearely understand when the game is over|
+| 8 | User | As a user, I want to be able to only use the terminal to play again | So I don't need additional clicking to reload the page and select the terminal to write|
 
 ## Flowchart
 
@@ -134,6 +135,8 @@ Errors that occurred but are fixed now were:
 * Other errors that occur where syntax errors. I took a while for my eyes to get used to how the text was supposed to be aligned in the document for python to read it properly.
 * Another but that occurred was that when the input was an upper cased letter, and then a lower case, the user was able to guess the same letter, and the hang man got hanged. So by inserting the function lower(), on the input for the user this issue was resolved.
 * I also had to use the Global keyword inside the different functions that affect the reset of the game values, such as the guessed letter list, attempts and other values that get set when the program starts running.
+
+* Known Bug: When manual testing was carried out and game was restarted several times in the terminal, that page deselected the terminal and was not able to be selected again. No console error was displayed and therefore I could not operate any changes to the code. This bug has only happened once through testing, so it might have been a network/connection error.
 
 ### Mentor Feedback
 
